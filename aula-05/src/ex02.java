@@ -10,7 +10,7 @@ public class ex02 {
         System.out.print("Insira um número: ");
         int usuarioNumero = scan.nextInt();
         for (int i = 0; i < array.length; i++) {
-            array[i] = 1 + random.nextInt(10);
+            array[i] = 1 + random.nextInt(50);
         }
 
 
