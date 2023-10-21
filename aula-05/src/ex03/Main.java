@@ -70,10 +70,19 @@ public class Main {
                         shouldBreak = true;
                     }
                 case 4:
-                    sc.close();
-                    return;
+                    if(!shouldBreak) {
+                        sc.close();
+                        System.exit(0);
+                    }
                 default:
-                    System.out.println("Opçao inválida.");
+                    if (!shouldBreak) {
+                        System.out.println("Opçao inválida.");
+                        shouldBreak = true;
+                    }
+            }
+
+            if (shouldBreak) {
+                continue;
             }
         }
     }
