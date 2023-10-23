@@ -1,64 +1,34 @@
 package ex04;
 
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListaCompras {
+   private List<Produto> produtos;
 
-    private String nome;
-    private String validade;
-    private Map<String, Double> preco = new HashMap<>();
-    private static double custoTotal = 0;
+   public ListaCompras() {
+       this.produtos = new ArrayList<>();
+   }
 
-    public ListaCompras(String nome, String validade, HashMap preco, double custoTotal) {
-        this.nome = nome;
-        this.validade = validade;
-        this.preco = preco;
-    }
+   public void adicionarProduto(Produto produto) {
+       this.produtos.add(produto);
+   }
 
-    public String getNome() {
-        return nome;
-    }
+   public double calcularCustoTotal() {
+       double custoTotal = 0;
+       for (Produto produto : produtos) {
+           custoTotal += produto.getPreco();
+       }
+       return custoTotal;
+   }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getValidade() {
-        return validade;
-    }
-
-    public void setValidade(String validade) {
-        this.validade = validade;
-    }
-
-    public Map<String, Double> getPreco() {
-        return preco;
-    }
-
-    public void setPreco(Map<String, Double> preco) {
-        this.preco = preco;
-    }
-
-    public static double getCustoTotal() {
-        return custoTotal;
-    }
-
-    public static void setCustoTotal(double custoTotal) {
-        ListaCompras.custoTotal = custoTotal;
-    }
-
-    @Override
-    public String toString () {return nome + " , data de validade: " + validade + "custa: " + preco;}
-
-    public boolean atualizarCustoTotal () {
-        if (preco == null) {
-            return false;
-        }
-        for (double valor : preco.values()) {
-            custoTotal += valor;
-        }
-        return true;
-    }
-
+   @Override
+    public String toString() {
+       StringBuilder stringBuilder = new StringBuilder();
+       for (Produto produto : produtos) {
+           stringBuilder.append(produto.toString()).append("\n");
+       }
+       return stringBuilder.toString();
+   }
 }
