@@ -79,6 +79,7 @@ public class Main {
                         System.out.println("Opçao inválida.");
                         shouldBreak = true;
                     }
+                    System.out.println("Opçao inválida.");
             }
 
             if (shouldBreak) {
