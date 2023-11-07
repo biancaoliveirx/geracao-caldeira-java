@@ -1,6 +1,6 @@
 package ex05;
 
-public enum Operação {
+public enum Operacao {
     ADICAO,
     SUBTRACACAO,
     MULTIPLICACAO,
