@@ -1,4 +1,4 @@
-package ex05;
+package ex04;
 
 public interface Calculavel {
     int adicionar(int a, int b);

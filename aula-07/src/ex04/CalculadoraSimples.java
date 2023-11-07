@@ -1,4 +1,4 @@
-package ex05;
+package ex04;
 
 class CalculadoraSimples implements Calculavel {
 

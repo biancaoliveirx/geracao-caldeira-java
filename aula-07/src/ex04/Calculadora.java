@@ -1,4 +1,4 @@
-package ex05;
+package ex04;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

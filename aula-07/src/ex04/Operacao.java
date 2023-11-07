@@ -1,4 +1,4 @@
-package ex05;
+package ex04;
 
 public enum Operacao {
     ADICAO,
