@@ -2,7 +2,7 @@ package ex05;
 
 public enum Operação {
     ADICAO,
-    SUBTRACAI,
+    SUBTRACACAO,
     MULTIPLICACAO,
     DIVISAO
 }
